@@ -32,8 +32,8 @@ end
 def add(domain)
   zone = Zone.new(:origin => "#{domain}.", :ttl => 3600)
   zone.save
-  Record.new(:record_type => 'A',  :zone_id => zone.id, :name => "*",          :data => "67.207.143.88").save
-  Record.new(:record_type => 'A',  :zone_id => zone.id, :name => "#{domain}.", :data => "67.207.143.88").save
+  Record.new(:record_type => 'A',  :zone_id => zone.id, :name => "*",          :data => "IP.ADD.RESS").save
+  Record.new(:record_type => 'A',  :zone_id => zone.id, :name => "#{domain}.", :data => "IP.ADD.RESS").save
   Record.new(:record_type => 'NS', :zone_id => zone.id, :name => "#{domain}.", :data => "ns1.slicehost.net.").save
   Record.new(:record_type => 'NS', :zone_id => zone.id, :name => "#{domain}.", :data => "ns2.slicehost.net.").save
   Record.new(:record_type => 'NS', :zone_id => zone.id, :name => "#{domain}.", :data => "ns3.slicehost.net.").save
